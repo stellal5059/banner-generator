@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-    $(function(){
-    //code goes here, cant run without being wrapped in function
-    //can use conditionals
-    });
-    </script>
-  </head>
-  <body>
-    <button type:'reset' id='reset'>Reset</button>
-    <h1> Name:<input type='text' id='name'></h1>
-    <h1> Motto:<input type= 'text' id='motto'></h1>
-   <h1 id='background'>What kind of background would you like?</h1>
-   <select>
-     <option>---</option>
-     <option>Random</option>
-     <option>Beautiful</option>
-     <option>Colorful</option>
-     <option>Cool</option>
-   </select>
-   <button ></button>
-  </body> 
 
-  
-  
-  
-  
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+      //code goes here, cant run without being wrapped in function
+      //can use conditionals
+     
+  </script>
+  <style>
+    #banner {
+      height:500px;
+      width:500px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <button type: 'reset' id='reset'>Reset</button>
+  <h1> Name:<input type='text' id='name'></h1>
+  <h1> Motto:<input type= 'text' id='motto'></h1>
+  <h1 id='background'>What kind of background would you like?</h1>
+  <select>
+    <option>---</option>
+    <option value="beautiful.jpg">Beautiful</option>
+    <option value='colorful.jpg'>Colorful</option>
+    <option value='cool.jpg'>Cool</option>
+  </select>
+  <br>
+  <br>
+  <button id='generate'>Generate</button>
+  <div id='banner'>
+   
+  </div>
+</body>
