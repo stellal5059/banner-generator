@@ -13,9 +13,9 @@
         var backgroundURL = $("#userChoice").val();
         var name = $("#name").val();
         var motto = $("#motto").val();
-        $('#motto').html(motto);
+        $('#motto2').html(motto);
         $('#motto').fadeIn(2000);
-        $('#name').html(name);
+        $('#name2').html(name);
         // $('#name').css("position", "absolute");
         $('#name').fadeIn(2000);
         $("#banner").css("background-image", "url(" + backgroundURL + ")", "position", "relative;");
@@ -23,7 +23,13 @@
         $('#reset').click(function() {
           location.reload();
         });
-
+        if(backgroundURL=='colorful.jpg'){
+          $('#name2').css("color", "black");
+          $('#motto2').css("color", "black");
+        }else{
+          $('#name2').css("color", "white");
+          $("#motto2").css("color","white");
+        }
 
       });
     });
@@ -49,9 +55,9 @@
   <h1 id='background'>What kind of background would you like?</h1>
   <select id="userChoice">
     <option>---</option>
-    <option value="beautiful.jpg">Beautiful</option>
+    <option value="beautiful_2.jpg">Beautiful</option>
     <option value='colorful.jpg'>Colorful</option>
-    <option value='cool.jpg'>Cool</option>
+    <option value='wonderful.jpg'>Cool</option>
   </select>
   <br>
   <br>
