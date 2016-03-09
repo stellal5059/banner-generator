@@ -12,12 +12,17 @@
       $('#generate').click(function() {
         var backgroundURL = $("#userChoice").val();
         var name = $("#name").val();
-        $('#name').html(name)
-        $('#name').css("position", "absolute");
+        var motto = $("#motto").val();
+        $('#motto').html(motto);
+        $('#motto').fadeIn(2000);
+        $('#name').html(name);
+        // $('#name').css("position", "absolute");
         $('#name').fadeIn(2000);
         $("#banner").css("background-image", "url(" + backgroundURL + ")", "position", "relative;");
         $("#banner").fadeIn(2000);
-
+        $('#reset').click(function() {
+          location.reload();
+        });
 
 
       });
@@ -29,11 +34,16 @@
       width: 500px;
       display: none;
     }
+    
+    #name2,
+    #motto2 {
+      font-size: 100px;
+    }
   </style>
 </head>
 
 <body>
-  <button type: 'reset' id='reset'>Reset</button>
+  <button type='reset' id='reset'>Reset</button>
   <h1> Name:<input type='text' id='name'></h1>
   <h1> Motto:<input type= 'text' id='motto'></h1>
   <h1 id='background'>What kind of background would you like?</h1>
@@ -47,7 +57,7 @@
   <br>
   <button id='generate'>Generate</button>
   <div id='banner'>
-    <h1 id='name' style="color:black"></h1>
-    <h1 id='motto'></h1>
+    <h1 id='name2' style="color:black"></h1>
+    <h1 id='motto2' style="color:black"></h1>
   </div>
 </body>
