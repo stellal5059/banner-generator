@@ -9,12 +9,24 @@
     $(function() {
       //code goes here, cant run without being wrapped in function
       //can use conditionals
-     
+      $('#generate').click(function() {
+        var backgroundURL = $("#userChoice").val();
+        var name = $("#name").val();
+        $('#name').html(name)
+        $('#name').css("position", "absolute");
+        $('#name').fadeIn(2000);
+        $("#banner").css("background-image", "url(" + backgroundURL + ")", "position", "relative;");
+        $("#banner").fadeIn(2000);
+
+
+
+      });
+    });
   </script>
   <style>
     #banner {
-      height:500px;
-      width:500px;
+      height: 500px;
+      width: 500px;
       display: none;
     }
   </style>
@@ -25,7 +37,7 @@
   <h1> Name:<input type='text' id='name'></h1>
   <h1> Motto:<input type= 'text' id='motto'></h1>
   <h1 id='background'>What kind of background would you like?</h1>
-  <select>
+  <select id="userChoice">
     <option>---</option>
     <option value="beautiful.jpg">Beautiful</option>
     <option value='colorful.jpg'>Colorful</option>
@@ -35,6 +47,7 @@
   <br>
   <button id='generate'>Generate</button>
   <div id='banner'>
-   
+    <h1 id='name' style="color:black"></h1>
+    <h1 id='motto'></h1>
   </div>
 </body>
