@@ -23,12 +23,13 @@
         $('#reset').click(function() {
           location.reload();
         });
-        if(backgroundURL=='colorful.jpg'){
+        if (backgroundURL == 'colorful.jpg') {
           $('#name2').css("color", "black");
           $('#motto2').css("color", "black");
-        }else{
+        }
+        else {
           $('#name2').css("color", "white");
-          $("#motto2").css("color","white");
+          $("#motto2").css("color", "white");
         }
 
       });
@@ -39,16 +40,21 @@
       height: 500px;
       width: 500px;
       display: none;
-      margin:0 auto;
+      margin: 0 auto;
+      /*line-height:100px;*/
+ 
     }
     
     #name2,
     #motto2 {
       font-size: 50px;
+      font-family: Courier;
+    
     }
+    
     body {
-      background-color:#66CCFF;
-      text-align:center;
+      background-color: #66CCFF;
+      text-align: center;
     }
   </style>
 </head>
