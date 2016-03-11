@@ -9,24 +9,26 @@
     $(function() {
       //code goes here, cant run without being wrapped in function
       //can use conditionals
-      $('#generate').click(function() {
-        var backgroundURL = $("#userChoice").val();
-        var name = $("#name").val();
-        var motto = $("#motto").val();
-        $('#motto2').html(motto);
-        $('#motto').fadeIn(2000);
-        $('#name2').html(name);
-        // $('#name').css("position", "absolute");
-        $('#name').fadeIn(2000);
-        $("#banner").css("background-image", "url(" + backgroundURL + ")", "position", "relative;");
-        $("#banner").fadeIn(2000);
-        $('#reset').click(function() {
+      $('#generate').click(function() { //everything will happen once the generate button is clicked
+        var backgroundURL = $("#userChoice").val(); //grabs value of background choice
+        var name = $("#name").val(); //grabs value of the name
+        var motto = $("#motto").val(); //grabs value of the motto
+        $('#motto2').html(motto); //changes the motto from nothing to there choice
+        $('#motto').fadeIn(2000); //will have it fade in when the button is clicked
+        $('#name2').html(name);//change name to their name
+        // $('#name').css("position", "absolute"); // <-- something i tried
+        $('#name').fadeIn(2000); //will have it fade in when the button is clicked
+        $("#banner").css("background-image", "url(" + backgroundURL + ")", "position", "relative;"); //will display the background of their choice
+        $("#banner").fadeIn(2000); //banner will show
+        $('#reset').click(function() { //will reset page when button is clicked
           location.reload();
         });
+        //If the background chosen is colorful.jpg then change the font color to black
         if (backgroundURL == 'colorful.jpg') {
           $('#name2').css("color", "black");
           $('#motto2').css("color", "black");
         }
+        //else keep the color of the font white
         else {
           $('#name2').css("color", "white");
           $("#motto2").css("color", "white");
@@ -45,19 +47,20 @@
     }
     
     #name2,
-    #motto2 {
+    #motto2 {    /*Font on the banner*/
       font-size: 50px;
       font-family: Courier;
       
     }
-    
+    /* Gives style to the questions for the user */
     body { 
       background-color: #66CCFF;
       text-align: center;
-    text-shadow: 2px 1.5px orange;
+    text-shadow: 2px 1.5px orange; 
       
     }
-    button{
+    /*Gives style to the buttons*/
+    button{ 
       color:Black;
       font-family:Courier;
       border-radius: 12px;
@@ -73,13 +76,14 @@
   <h1 id='background'>What kind of background would you like?</h1>
   <select id="userChoice">
     <option>---</option>
-    <option value="beautiful_2.jpg">Beautiful</option>
+    <!--Picture URL is set to the Value is set to the userChoice-->
+    <option value="beautiful_2.jpg">Beautiful</option> 
     <option value='colorful.jpg'>Colorful</option>
     <option value='wonderful.jpg'>Cool</option>
   </select>
   <br>
   <br>
-  <button id='generate'>Generate</button>
+  <button id='generate'>Generate</button> <!--Allows everything to take place-->
   <div id='banner'>
     <h1 id='name2' style="color:black"></h1>
     <h1 id='motto2' style="color:black"></h1>
